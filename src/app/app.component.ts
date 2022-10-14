@@ -10,15 +10,19 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'first_project';
   list:any[]=[];
-   add(item:String)
+  listd:any[]=[];
+  
+  EnterSubmit(item:String,bo:any,date:any)
     {
       
+      if(item!="")
 this.list.push({item});
-console.log(this.list)
+this.listd.push({date});
+bo.value=""
 
-  }
+}
   remove(i:number)
   {
 this.list.splice(i,1);
-  }
-}
+this.listd.splice(i,1);
+  }}
